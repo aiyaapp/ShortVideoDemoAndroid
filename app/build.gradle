@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.aiyaapp.aiya.test"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs += ['../libs/core', '../libs/aiyagift', '../libs/aiyatrack', '../libs/shortvideo', '../libs/beauty']
+//            jniLibs.srcDirs += ['../libs/core']
+        }
+    }
+}
+
+dependencies {
+
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+//  compile fileTree(dir: 'libs', include: ['*.aar'])
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+    //视频合成
+    compile 'com.googlecode.mp4parser:isoparser:1.1.21'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    //==============================哎吖特效开始============================================
+    compile 'com.aiyaapp.aiya:AyCore:v4.0.4'
+    compile 'com.aiyaapp.aiya:AyEffect:v4.0.4'
+    compile 'com.aiyaapp.aiya:AyFaceTrack:v4.0.4'
+    compile 'com.aiyaapp.aiya:AyBeauty:v4.0.4'
+    compile 'com.aiyaapp.aiya:AyShortVideoEffect:v4.0.4'
+    compile 'com.aiyaapp.aavt:aavt:a0.3.4'
+    //==============================哎吖特效结束===========================================
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.9.7'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    implementation project(':waveview')
+
+}

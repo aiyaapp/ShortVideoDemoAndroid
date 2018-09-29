@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#111111</color>
+    <color name="colorPrimaryDark">#111111</color>
+
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="color_8f">#8f8f8f</color>
+
+
+    <color name="record_progress_black">#2c2c2c</color>
+    <color name="record_progress_bg">#2c2c2c</color>
+    <color name="record_progress_blue">#fe7044</color>
+    <color name="record_progress_pause">#FFFFFF</color>
+    <color name="record_progress_red">#e85932</color>
+
+</resources>

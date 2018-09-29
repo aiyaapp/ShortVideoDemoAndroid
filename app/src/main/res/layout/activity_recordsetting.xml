@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="录制参数"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+
+    <!--分辨率-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="分辨率"
+            android:textColor="@color/color_8f"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/rate_480"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="480p"
+            android:textColor="@drawable/switch_color_txt_selector"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/rate_720"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="720p"
+            android:textColor="@drawable/switch_color_txt_selector"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/rate_1080"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="1080p"
+            android:textColor="@drawable/switch_color_txt_selector"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_8f" />
+    <!--帧率-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="帧率(fps)"
+            android:textColor="@color/color_8f"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame_15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="15"
+            android:textColor="@drawable/switch_color_txt_selector"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame_24"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="24"
+            android:textColor="@drawable/switch_color_txt_selector"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/frame_30"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="30"
+            android:textColor="@drawable/switch_color_txt_selector"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_8f" />
+    <!--视频码率-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="视频码率(kbps)"
+            android:textColor="@color/color_8f"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/v_ratio_2048"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="2048"
+            android:textColor="@drawable/switch_color_txt_selector"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/v_ratio_4069"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="4069"
+            android:textColor="@drawable/switch_color_txt_selector"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/v_ratio_8192"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="8192"
+            android:textColor="@drawable/switch_color_txt_selector"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_8f" />
+
+    <!--音频码率-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="音频码率(kbps)"
+            android:textColor="@color/color_8f"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/a_ratio_64"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="64"
+            android:textColor="@drawable/switch_color_txt_selector"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/a_ratio_128"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="128"
+            android:textColor="@drawable/switch_color_txt_selector"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/a_ratio_256"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="256"
+            android:textColor="@drawable/switch_color_txt_selector"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_8f" />
+
+    <!--选择音乐-->
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="选择音乐"
+            android:textColor="@color/color_8f"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/music_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="无"
+            android:textColor="@drawable/switch_color_txt_selector"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/music_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="音乐1"
+            android:textColor="@drawable/switch_color_txt_selector"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/music_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="音乐2"
+            android:textColor="@drawable/switch_color_txt_selector"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_8f" />
+
+    <!--导入拍摄-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/aiya_import"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_margin="30dp"
+            android:gravity="center"
+            android:padding="20dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/aiya_import" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="本地导入"
+                android:layout_marginTop="5dp"
+                android:textSize="11sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/aiya_shooting"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_margin="30dp"
+            android:gravity="center"
+            android:padding="20dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/aiya_shooting" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="开始录制"
+                android:layout_marginTop="5dp"
+                android:textSize="11sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

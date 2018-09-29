@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <SurfaceView
+        android:id="@+id/mSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+
+    <RelativeLayout
+        android:id="@+id/conroller_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <RelativeLayout
+            android:id="@+id/head_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!--头布局-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/return_view"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="5dp"
+                android:src="@mipmap/aiya_return_p" />
+
+            <ImageView
+                android:id="@+id/switch_camera"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/aiya_toggle_n" />
+
+
+            <TextView
+                android:id="@+id/next_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <!--滤镜-->
+        <LinearLayout
+            android:id="@+id/mirror_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="90dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@mipmap/aiya_filter_n" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="滤镜"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!--美颜-->
+        <LinearLayout
+            android:id="@+id/beauty_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/mirror_layout"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/aiya_skin_care_selector" />
+
+            <TextView
+                android:id="@+id/beauty_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="美颜关"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+        </RelativeLayout>
+
+
+
+        <!--底部控制布局-->
+        <RelativeLayout
+            android:id="@+id/buttom_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp">
+
+            <!--底布局-->
+            <LinearLayout
+                android:id="@+id/buttom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/effect_face"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/aiya_effect_face_n" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="人脸特效"
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/record_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/aiya_record_state" />
+
+                <ImageView
+                    android:id="@+id/delete_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/aiya_delete_n" />
+
+            </LinearLayout>
+
+            <!--录制进度条-->
+            <com.aiyaapp.aiyamediaeditor.view.RecordProgressView
+                android:id="@+id/record_progress"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_above="@+id/buttom_layout"
+                android:layout_marginBottom="25dp"
+                android:background="@mipmap/aiya_record_dotted_line" />
+
+            <!--视频速率-->
+            <LinearLayout
+                android:id="@+id/speed_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_above="@+id/record_progress"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/record_border_shape"
+                android:paddingBottom="0.5dp"
+                android:paddingTop="0.5dp">
+
+                <TextView
+                    android:id="@+id/record_speed_0_5"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/record_bg_color"
+                    android:gravity="center"
+                    android:text="极慢"
+                    android:textColor="@drawable/record_text_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/record_speed_1"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/record_bg_color"
+                    android:gravity="center"
+                    android:text="慢"
+                    android:textColor="@drawable/record_text_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/record_speed_1_5"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/record_bg_color"
+                    android:gravity="center"
+                    android:text="标准"
+                    android:textColor="@drawable/record_text_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/record_speed_2"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/record_bg_color"
+                    android:gravity="center"
+                    android:text="快"
+                    android:textColor="@drawable/record_text_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/record_speed_2_5"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/record_bg_color"
+                    android:gravity="center"
+                    android:text="极快"
+                    android:textColor="@drawable/record_text_color"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <!--人脸特效列表-->
+        <LinearLayout
+            android:id="@+id/effect_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#77000000"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#88000000"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="人脸特效"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mEffectList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!--滤镜-->
+        <LinearLayout
+            android:id="@+id/mirrorList_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#77000000"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#88000000"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="滤镜"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mirror_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

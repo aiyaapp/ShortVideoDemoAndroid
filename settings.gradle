@@ -1,0 +1,2 @@
+//include  ':AiyaDemo4'
+include ':app', ':waveview'
